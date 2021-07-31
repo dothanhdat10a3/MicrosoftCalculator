@@ -30,7 +30,7 @@ public:
 
 public:
     int getNumber();
-    void setNumber(INPUT_TYPE inputType);
+    void setNumber();
     void castToDecimal(RADIX_TYPE radixType);
 
     //cast number to Decimal
@@ -44,16 +44,27 @@ public:
     int* castFromDecToDec(int number);
     int* castFromDecToOct(int number);
     int* castFromDecToBin(int number);
+
+    //getter
+    int* getHexNumberToShow();
+    int* getDecNumberToShow();
+    int* getOctNumberToShow();
+    int* getBinNumberToShow();
 private:   
     int index = 0;
     int m_decValue;
     int m_number;
-    string m_numberInput;
+    string m_numberInput = "1000";
 
-    int m_hexNumber[100];
-    int m_decNumber[100];
-    int m_octNumber[100];
-    int m_binNumber[64];
+    int m_hexNumber[100] = {0};
+    int m_decNumber[100] = {0};
+    int m_octNumber[100] = {0};
+    int m_binNumber[64] = {0};
+
+    int m_binNumberToShow[64] = {0};
+    int m_decNumberToShow[100] = {0};
+    int m_octNumberToShow[100] = {0};
+    int m_hexNumberToShow[100] = {0};
 
 };
 

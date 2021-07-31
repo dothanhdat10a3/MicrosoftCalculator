@@ -96,7 +96,7 @@ Window {
             color: "#E8E8E8"
             Text {
                 id: hexadecimalValue
-                text: "37"
+                text: numberHex[0]
                 anchors.left: hexValue.left
                 anchors.leftMargin: 5
 
